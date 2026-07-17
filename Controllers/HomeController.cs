@@ -1,14 +1,38 @@
 using System.Diagnostics;
+using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using PortofolioASP.Models;
+using PortofolioASP.Models.ViewModels;
+using PortofolioASP.Services;
 
 namespace PortofolioASP.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly IPortfolioService _portfolio;
+
+    public HomeController(IPortfolioService portfolio)
+    {
+        _portfolio = portfolio;
+    }
+
     public IActionResult Index()
     {
-        return View();
+        var culture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+
+        var model = new HomePageViewModel
+        {
+            Portfolio = _portfolio.GetPortfolio(culture),
+            // Status pengiriman kontak dibawa dari ContactController lewat TempData (pola PRG).
+            Status = TempData["ContactStatus"] switch
+            {
+                nameof(ContactStatus.Success) => ContactStatus.Success,
+                nameof(ContactStatus.Error) => ContactStatus.Error,
+                _ => ContactStatus.None,
+            },
+        };
+
+        return View(model);
     }
 
     public IActionResult Privacy()
