@@ -23,8 +23,7 @@
                     <h3 class="project-title">@project.Title</h3>
                     <p class="project-desc clamped">@project.Description</p>
                     <button type="button" class="readmore-btn" style="display:none"
-                            data-more="@Model.ViewProjectLabel == null ? "Read more" : "Read more""
-                            data-less="Read less">Read more</button>
+                            data-more="@Model.ReadMore" data-less="@Model.ReadLess">@Model.ReadMore</button>
                     <a class="link-accent project-link" href="@project.Link" target="_blank" rel="noopener noreferrer">
                         <span>@Model.ViewProjectLabel</span>
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
