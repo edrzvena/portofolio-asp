@@ -55,6 +55,8 @@ public class ProjectsSection
     public string ViewAllLabel { get; set; } = string.Empty;
     public string ViewAllUrl { get; set; } = string.Empty;
     public string ViewProjectLabel { get; set; } = string.Empty;
+    public string ReadMore { get; set; } = "Read more";
+    public string ReadLess { get; set; } = "Read less";
     public List<ProjectItem> Items { get; set; } = new();
 }
 

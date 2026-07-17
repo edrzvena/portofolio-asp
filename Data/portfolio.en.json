@@ -123,6 +123,8 @@
     "viewAllLabel": "View all on GitHub",
     "viewAllUrl": "https://github.com/edrzvena",
     "viewProjectLabel": "View Project",
+    "readMore": "Read more",
+    "readLess": "Read less",
     "items": [
       {
         "title": "Daily Standup",
