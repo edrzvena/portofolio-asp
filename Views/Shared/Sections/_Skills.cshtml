@@ -1,0 +1,27 @@
+@model SkillsSection
+
+<section id="skills" class="section">
+    <div class="wrap">
+        <h2 class="section-heading" style="margin-bottom:0.75rem">@Model.Heading</h2>
+
+        <div class="skills-grid">
+            @foreach (var skill in Model.Items)
+            {
+                <div class="skill-card">
+                    <span class="skill-icon brand" style="--icon:url('/icons/@(skill.IconSlug).svg')" role="img" aria-label="@skill.Title"></span>
+                    <h3 class="skill-name">@skill.Title</h3>
+                </div>
+            }
+        </div>
+
+        <div class="tools">
+            <h3 class="tools-heading">@Model.ToolsHeading</h3>
+            <div class="tools-chips">
+                @foreach (var tech in Model.Tools)
+                {
+                    <span class="chip">@tech</span>
+                }
+            </div>
+        </div>
+    </div>
+</section>
