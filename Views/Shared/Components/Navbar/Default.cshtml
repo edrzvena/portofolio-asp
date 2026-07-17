@@ -1,0 +1,59 @@
+@model Dictionary<string, string>
+
+@* Navbar sticky glassmorphism. Label diambil dari Model (nav labels), id section dari SiteSections. *@
+<header class="navbar" id="site-navbar">
+    <div class="navbar-inner">
+        <button type="button" class="navbar-logo" data-scroll-to="home">&lt;/&gt; Pedro Widya</button>
+
+        <nav class="navbar-links">
+            @foreach (var id in SiteSections.Ids)
+            {
+                <button type="button" class="nav-link" data-scroll-to="@id" data-nav="@id">
+                    @(Model.TryGetValue(id, out var label) ? label : id)
+                </button>
+            }
+        </nav>
+
+        <div class="navbar-actions">
+            <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <button type="button" class="icon-btn navbar-hamburger" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="navbar-mobile" id="navbar-mobile">
+        <div class="navbar-mobile-list">
+            @foreach (var id in SiteSections.Ids)
+            {
+                <button type="button" class="navbar-mobile-link" data-scroll-to="@id" data-nav-mobile="@id">
+                    @(Model.TryGetValue(id, out var label) ? label : id)
+                </button>
+            }
+        </div>
+    </div>
+</header>

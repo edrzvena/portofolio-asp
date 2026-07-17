@@ -1,0 +1,16 @@
+@model FooterSection
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <span class="footer-logo">&lt;/&gt; Pedro Widya</span>
+            <nav class="footer-links">
+                @foreach (var link in Model.Links)
+                {
+                    <a class="footer-link" href="@link.Url" target="_blank" rel="noopener noreferrer">@link.Name</a>
+                }
+            </nav>
+        </div>
+        <p class="footer-rights">@Model.Rights</p>
+    </div>
+</footer>
