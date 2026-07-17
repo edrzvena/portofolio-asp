@@ -165,6 +165,8 @@
     "emailPlaceholder": "Your Email",
     "messagePlaceholder": "Your Message",
     "sendLabel": "Send Message",
+    "successMessage": "Message sent, thanks! I'll get back to you.",
+    "errorMessage": "Failed to send. Please try again, or email me directly at widyadharta@gmail.com.",
     "socials": [
       { "name": "Email", "url": "mailto:widyadharta@gmail.com", "iconSlug": "mail" },
       { "name": "LinkedIn", "url": "https://www.linkedin.com/in/pedro-widyadharta-ciady-773209350", "iconSlug": "linkedin" },

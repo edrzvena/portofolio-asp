@@ -68,6 +68,8 @@ public class ContactSection
     public string EmailPlaceholder { get; set; } = string.Empty;
     public string MessagePlaceholder { get; set; } = string.Empty;
     public string SendLabel { get; set; } = string.Empty;
+    public string SuccessMessage { get; set; } = "Message sent, thanks! I'll get back to you.";
+    public string ErrorMessage { get; set; } = "Failed to send. Please try again later.";
     public List<SocialLink> Socials { get; set; } = new();
 }
 
