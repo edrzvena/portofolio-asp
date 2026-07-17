@@ -1,0 +1,39 @@
+@model ProjectsSection
+
+<section id="projects" class="section">
+    <div class="wrap reveal">
+        <div class="projects-head">
+            <h2 class="section-heading" style="margin-bottom:0">@Model.Heading</h2>
+            <a class="link-accent mono" href="@Model.ViewAllUrl" target="_blank" rel="noopener noreferrer">
+                @Model.ViewAllLabel
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        <div class="projects-grid">
+            @foreach (var project in Model.Items)
+            {
+                <div class="card project-card">
+                    <div class="project-thumb">
+                        <img src="@project.ImagePath" alt="@project.Title" loading="lazy" />
+                    </div>
+                    <h3 class="project-title">@project.Title</h3>
+                    <p class="project-desc clamped">@project.Description</p>
+                    <button type="button" class="readmore-btn" style="display:none"
+                            data-more="@Model.ViewProjectLabel == null ? "Read more" : "Read more""
+                            data-less="Read less">Read more</button>
+                    <a class="link-accent project-link" href="@project.Link" target="_blank" rel="noopener noreferrer">
+                        <span>@Model.ViewProjectLabel</span>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
