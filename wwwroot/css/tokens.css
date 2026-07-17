@@ -1,0 +1,52 @@
+/*
+  Token warna sebagai channel RGB (dipakai lewat rgb(var(--x) / <alpha>)).
+  Diport dari src/index.css milik versi React.
+  :root                     = tema terang (default)
+  :root[data-theme="dark"]  = tema gelap (data-theme di-set di <html> oleh theme.js)
+*/
+:root {
+  --color-ink: 17 24 39;
+  --color-muted: 100 116 139;
+  --color-accent: 37 99 235;
+  --color-accent-hover: 29 78 216;
+  --color-surface: 248 249 250;
+  --color-band: 241 243 255;
+  --color-code: 30 41 59;
+  --color-line: 229 231 235;
+  --color-line-strong: 209 213 219;
+  --color-page: 255 255 255;
+  --color-card: 255 255 255;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-ink: 226 232 240;
+  --color-muted: 148 163 184;
+  --color-accent: 96 165 250;
+  --color-accent-hover: 147 197 253;
+  --color-surface: 30 41 59;
+  --color-band: 15 23 42;
+  --color-code: 15 23 42;
+  --color-line: 51 65 85;
+  --color-line-strong: 71 85 105;
+  --color-page: 11 17 32;
+  --color-card: 17 24 39;
+
+  color-scheme: dark;
+}
+
+/* Helper alias supaya penulisan CSS lebih ringkas */
+:root {
+  --ink: rgb(var(--color-ink));
+  --muted: rgb(var(--color-muted));
+  --accent: rgb(var(--color-accent));
+  --accent-hover: rgb(var(--color-accent-hover));
+  --surface: rgb(var(--color-surface));
+  --band: rgb(var(--color-band));
+  --code: rgb(var(--color-code));
+  --line: rgb(var(--color-line));
+  --line-strong: rgb(var(--color-line-strong));
+  --page: rgb(var(--color-page));
+  --card: rgb(var(--color-card));
+}
