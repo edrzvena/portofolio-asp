@@ -1,0 +1,26 @@
+@model CertificatesSection
+
+<section id="certificates" class="section">
+    <div class="wrap wrap-5xl reveal">
+        <h2 class="section-heading">@Model.Heading</h2>
+
+        <div class="cert-grid">
+            @foreach (var cert in Model.Items)
+            {
+                <div class="card cert-card">
+                    <h3 class="cert-title">@cert.Title</h3>
+                    <p class="cert-issuer">@cert.Issuer</p>
+                    <p class="cert-desc">@cert.Description</p>
+                    <a class="link-accent" href="@cert.VerifyUrl" target="_blank" rel="noopener noreferrer">
+                        @Model.VerifyLabel
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
