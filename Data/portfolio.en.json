@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "certificates": "Certificates",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "quote": "Talk is cheap. Show me the code.",
+    "quoteAuthor": "— Linus Torvalds",
+    "role": "// Web Developer",
+    "greeting": "Hi, I'm",
+    "name": "Pedro Widya",
+    "greetingSuffix": "",
+    "techStack": "JavaScript / TypeScript / React / Express / Tailwind / PostgreSQL",
+    "viewProjectsLabel": "View Projects",
+    "downloadCvLabel": "Download CV",
+    "avatarPath": "/img/myself_casual.jpg",
+    "cvPath": "/files/PEDRO-WIDYADHARTA-CIADY.pdf",
+    "stats": [
+      { "value": "5+", "label": "Projects" },
+      { "value": "2", "label": "Certifications" },
+      { "value": "12", "label": "Technologies" }
+    ]
+  },
+  "skills": {
+    "heading": "Tech Stack",
+    "toolsHeading": "Tools & Others",
+    "items": [
+      { "title": "JavaScript", "iconSlug": "javascript" },
+      { "title": "TypeScript", "iconSlug": "typescript" },
+      { "title": "Python", "iconSlug": "python" },
+      { "title": "Go", "iconSlug": "go" },
+      { "title": "Node.js", "iconSlug": "nodedotjs" },
+      { "title": "Express", "iconSlug": "express" },
+      { "title": "Django", "iconSlug": "django" },
+      { "title": "Gin", "iconSlug": "gin" },
+      { "title": "React", "iconSlug": "react" },
+      { "title": "Tailwind CSS", "iconSlug": "tailwindcss" },
+      { "title": "PostgreSQL", "iconSlug": "postgresql" },
+      { "title": "Supabase", "iconSlug": "supabase" },
+      { "title": "Git", "iconSlug": "git" },
+      { "title": "Vercel", "iconSlug": "vercel" },
+      { "title": "Bruno API", "iconSlug": "bruno" },
+      { "title": "Docker", "iconSlug": "docker" }
+    ],
+    "tools": ["GitHub", "REST API", "AI-Assisted Development (Claude)"]
+  },
+  "experience": {
+    "heading": "Experience",
+    "items": [
+      {
+        "title": "Marketing Support",
+        "company": "PT. GFC Terpadu",
+        "date": "Nov 2022 - present",
+        "tasks": [
+          "Compiled and monitored store KPIs as an instrument for evaluating branch operational performance, and reported assessment results to management on a regular basis.",
+          "Conducted assessments of visual merchandising standards and store service quality by reviewing CCTV footage in accordance with company operating standards.",
+          "Managed the CCTV equipment procurement process from purchase coordination and invoice verification to administrative documentation for store needs.",
+          "Supported marketing campaign execution through the management and distribution of promotional materials (TVC, digital media, and print) so marketing strategies hit their target.",
+          "Coordinated cross-functionally between the Marketing team and store Supervisors in assessment, performance reporting, and follow-up of branch evaluation results."
+        ]
+      },
+      {
+        "title": "Administration",
+        "company": "PT. Usaha Inti Bersama",
+        "date": "Nov 2020 - Mar 2022",
+        "tasks": [
+          "Managed online store operations, including product management, order processing, and sales performance monitoring to ensure smooth digital transactions.",
+          "Prepared and accurately entered daily sales reports, including recording cash inflows and outflows as material for operational financial evaluation.",
+          "Maintained orderly, well-documented petty cash and main cash records to support store financial transparency and accountability."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "items": [
+      {
+        "title": "Informatics Engineering",
+        "institution": "Universitas Buddhi Dharma",
+        "date": "2020 - 2024",
+        "details": [
+          "GPA: 3.51.",
+          "Focused on modern web development using React and PostgreSQL.",
+          "NLP, Data Mining, and Text Mining development."
+        ]
+      },
+      {
+        "title": "Thesis Project",
+        "institution": "Implementation of emotion sentiment in song lyrics using a Discord Bot with a lexicon-based sentiment analysis method",
+        "date": "2023 - 2024",
+        "details": [
+          "Built a Discord Bot to play songs.",
+          "Built a Discord Bot to analyze the emotional sentiment of songs.",
+          "Developed Next, Previous, Pause, Shut Down, and Show Lyric controls for the Discord Bot."
+        ]
+      }
+    ]
+  },
+  "certificates": {
+    "heading": "Certificates",
+    "verifyLabel": "Verify Credential",
+    "items": [
+      {
+        "title": "Claude 101",
+        "issuer": "Anthropic",
+        "description": "Prompt engineering, Projects, Artifacts, Skills, MCP integration, Enterprise Search, and Research mode.",
+        "verifyUrl": "https://verify.skilljar.com/c/7t6seko3wzra"
+      },
+      {
+        "title": "Claude Code 101",
+        "issuer": "Anthropic",
+        "description": "AI coding agent workflows: Explore→Plan→Code→Commit, context management, CLAUDE.md, subagents, MCP servers, and hooks.",
+        "verifyUrl": "https://verify.skilljar.com/c/v8p393f46h7m"
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projects",
+    "viewAllLabel": "View all on GitHub",
+    "viewAllUrl": "https://github.com/edrzvena",
+    "viewProjectLabel": "View Project",
+    "items": [
+      {
+        "title": "Daily Standup",
+        "description": "A web app that helps developers create daily standup reports instantly: users just type what they did in everyday language, and the app automatically turns it into a clean report ready to share with the team.",
+        "imagePath": "/img/daily_standup.jpg",
+        "link": "https://github.com/edrzvena/daily-standup"
+      },
+      {
+        "title": "Code Explainer",
+        "description": "A web app that explains code syntax using Claude AI: choose your language and get an explanation for each block of logic.",
+        "imagePath": "/img/code_explainer.jpg",
+        "link": "https://github.com/edrzvena/code-explainer"
+      },
+      {
+        "title": "POS Cashier — Point of Sale Web App",
+        "description": "Built a web-based Point of Sale (POS) cashier app to support daily sales transactions for cafe/retail businesses, using React and Supabase.",
+        "imagePath": "/img/pos.png",
+        "link": "https://github.com/edrzvena/kasir-nya"
+      },
+      {
+        "title": "Bot Discord",
+        "description": "A bot for playing music on the Discord platform.",
+        "imagePath": "/img/music-discord.png",
+        "link": "https://discord.com/oauth2/authorize?client_id=1223985141144092794"
+      },
+      {
+        "title": "Implementation Of Text Mining For Emotion Detection",
+        "description": "Detects emotional sentiment from text using text mining techniques to analyze and identify the emotions contained in sentences.",
+        "imagePath": "/img/sentiment.jpeg",
+        "link": "https://github.com/edrzvena/text-emotion-analyzer"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact Me",
+    "formHeading": "Send me a message",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "sendLabel": "Send Message",
+    "socials": [
+      { "name": "Email", "url": "mailto:widyadharta@gmail.com", "iconSlug": "mail" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/pedro-widyadharta-ciady-773209350", "iconSlug": "linkedin" },
+      { "name": "GitHub", "url": "https://github.com/edrzvena", "iconSlug": "github" }
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 Pedro Widya. All rights reserved.",
+    "links": [
+      { "name": "GitHub", "url": "https://github.com/edrzvena", "iconSlug": "github" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/pedro-widyadharta-ciady-773209350", "iconSlug": "linkedin" },
+      { "name": "Email", "url": "mailto:widyadharta@gmail.com", "iconSlug": "mail" }
+    ]
+  }
+}
