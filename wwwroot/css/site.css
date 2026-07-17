@@ -414,6 +414,12 @@ section[id] { scroll-margin-top: 4rem; }
 }
 .skill-card:hover { border-color: var(--line-strong); box-shadow: 0 12px 40px rgba(0,0,0,.04); }
 .skill-icon { height: 2rem; width: 2rem; flex-shrink: 0; }
+/* Ikon brand (Simple Icons) diwarnai accent via CSS mask, jadi ikut berubah di dark mode. */
+.skill-icon.brand {
+  background-color: var(--accent);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
 .skill-name { font-size: 0.75rem; font-weight: 500; line-height: 1.375; color: var(--ink); margin: 0; }
 
 .tools {
