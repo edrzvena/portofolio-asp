@@ -1,0 +1,27 @@
+@model EducationSection
+
+<section id="education" class="section">
+    <div class="wrap wrap-4xl reveal">
+        <h2 class="section-heading">@Model.Heading</h2>
+
+        <div class="timeline">
+            <div class="timeline-list">
+                @foreach (var edu in Model.Items)
+                {
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <p class="timeline-date">@edu.Date</p>
+                        <h3 class="timeline-title">@edu.Title</h3>
+                        <p class="timeline-sub">@edu.Institution</p>
+                        <ul class="timeline-tasks">
+                            @foreach (var detail in edu.Details)
+                            {
+                                <li>@detail</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
