@@ -1,0 +1,62 @@
+@model ContactViewModel
+@{
+    var c = Model.Content;
+}
+
+<section id="contact" class="section">
+    <div class="wrap wrap-5xl contact reveal">
+        <h2 class="section-heading" style="margin-bottom:1rem">@c.Heading</h2>
+
+        <div class="contact-socials">
+            @foreach (var social in c.Socials)
+            {
+                <a class="social-btn" href="@social.Url" target="_blank" rel="noopener noreferrer">
+                    @switch (social.IconSlug)
+                    {
+                        case "mail":
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            break;
+                        case "linkedin":
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            break;
+                        case "github":
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 21.13V25"></path></svg>
+                            break;
+                    }
+                    @social.Name
+                </a>
+            }
+        </div>
+
+        <div class="contact-form-wrap">
+            <h3 class="contact-form-heading">@c.FormHeading</h3>
+
+            @if (Model.Status == ContactStatus.Success)
+            {
+                <p class="contact-alert success">@c.SuccessMessage</p>
+            }
+            else if (Model.Status == ContactStatus.Error)
+            {
+                <p class="contact-alert error">@c.ErrorMessage</p>
+            }
+
+            <form asp-controller="Contact" asp-action="Send" method="post" class="contact-form">
+                <div class="field-row">
+                    <div>
+                        <input asp-for="Form.Name" class="field-input" placeholder="@c.NamePlaceholder" autocomplete="name" />
+                        <span asp-validation-for="Form.Name" class="field-error"></span>
+                    </div>
+                    <div>
+                        <input asp-for="Form.Email" type="email" class="field-input" placeholder="@c.EmailPlaceholder" autocomplete="email" />
+                        <span asp-validation-for="Form.Email" class="field-error"></span>
+                    </div>
+                </div>
+                <div>
+                    <textarea asp-for="Form.Message" class="field-textarea" rows="4" placeholder="@c.MessagePlaceholder"></textarea>
+                    <span asp-validation-for="Form.Message" class="field-error"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full-mobile">@c.SendLabel</button>
+            </form>
+        </div>
+    </div>
+</section>
