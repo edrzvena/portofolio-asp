@@ -1,0 +1,27 @@
+@model ExperienceSection
+
+<section id="experience" class="section">
+    <div class="wrap wrap-4xl reveal">
+        <h2 class="section-heading">@Model.Heading</h2>
+
+        <div class="timeline">
+            <div class="timeline-list">
+                @foreach (var exp in Model.Items)
+                {
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <p class="timeline-date">@exp.Date</p>
+                        <h3 class="timeline-title">@exp.Title</h3>
+                        <p class="timeline-sub">@exp.Company</p>
+                        <ul class="timeline-tasks">
+                            @foreach (var task in exp.Tasks)
+                            {
+                                <li>@task</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
