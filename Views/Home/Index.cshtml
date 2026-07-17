@@ -1,8 +1,29 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@model HomePageViewModel
+@{
+    ViewData["Title"] = "";
+    var p = Model.Portfolio;
+    var contactVm = new ContactViewModel
+    {
+        Content = p.Contact,
+        Form = Model.ContactForm,
+        Status = Model.Status,
+    };
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<partial name="Sections/_Hero" model="p.Hero" />
+<partial name="Sections/_Skills" model="p.Skills" />
+<partial name="Sections/_Experience" model="p.Experience" />
+<partial name="Sections/_Education" model="p.Education" />
+<partial name="Sections/_Certificates" model="p.Certificates" />
+<partial name="Sections/_Projects" model="p.Projects" />
+<partial name="Sections/_Contact" model="contactVm" />
+
+@if (ViewData["ScrollToContact"] is true)
+{
+    <script>
+        window.addEventListener('load', function () {
+            var el = document.getElementById('contact');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+}
